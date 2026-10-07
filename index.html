@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>دعوة زفاف أحمد ونور</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <div class="envelope-overlay" id="royalEnvelope">
+      <div
+        class="envelope-container"
+        id="envelopeBox"
+        style="
+          background-image: url(&quot;./Assest/envelope-overlay.jpeg&quot;);
+        "
+      >
+        <div class="sunburst-rays"></div>
+        <div
+          class="envelope-click-area"
+          onclick="openRoyalEnvelopeSimple()"
+        ></div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="main-wrapper">
+        <div class="bg-video-wrapper">
+          <video
+            class="bg-video"
+            id="bgVideo"
+            autoplay
+            muted
+            playsinline
+            preload="auto"
+          >
+            <source src="./Assest/video.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <button
+          class="music-float-btn"
+          onclick="toggleAudio()"
+          title="تشغيل/إيقاف الموسيقى"
+        >
+          <i class="fa-solid fa-volume-xmark" id="musicIcon"></i>
+        </button>
+        <audio
+          id="bgMusic"
+          loop
+          src="./Assest/audio.mp3"
+        ></audio>
+        <div class="flow-content">
+          <div class="hero-video-section">
+            <p class="scroll-hint-light">
+              <i class="fa-solid fa-chevron-down"></i> اسحب لأسفل
+            </p>
+          </div>
+          <div class="flow-section card-style">
+            <p
+              style="
+                font-family: var(--font-heading);
+                font-size: 1.3rem;
+                color: var(--cream-beige);
+                line-height: 2.1;
+              "
+            >
+              ﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+              لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً﴾
+            </p>
+            <div class="gold-divider"><i class="fa-solid fa-crown"></i></div>
+            <p
+              style="
+                color: var(--gold-light);
+                font-size: 1.2rem;
+                font-family: var(--font-heading);
+              "
+            >
+              يتشرف كل من العائلتين بدعوتكم لحضور حفل زفاف
+            </p>
+            <div class="names-header">أحمد & نور</div>
+            <p style="color: var(--cream-beige); font-size: 1rem">
+              لتكتمل أهازيج الفرح والسرور بحضوركم الكريم
+            </p>
+            <div class="date-box">
+              <p style="font-size: 1.3rem; color: #fff; font-weight: bold">
+                الثلاثاء
+              </p>
+              <p
+                style="
+                  font-size: 2rem;
+                  color: var(--gold-light);
+                  font-family: var(--font-heading);
+                  font-weight: bold;
+                  margin: 5px 0;
+                "
+              >
+                20 أكتوبر 2026 م
+              </p>
+              <p style="font-size: 0.95rem; color: var(--gold-primary)">
+                الموافق 9 جمادى الأولى 1448 هـ
+              </p>
+              <p
+                style="
+                  margin-top: 10px;
+                  color: var(--gold-light);
+                  font-size: 1.1rem;
+                "
+              >
+                <i class="fa-regular fa-clock"></i> في تمام الساعة 8:00 مساءً
+              </p>
+            </div>
+          </div>
+          <div class="gold-divider"><i class="fa-solid fa-gem"></i></div>
+          <div class="flow-section card-style">
+            <h3
+              style="
+                font-family: var(--font-heading);
+                color: var(--gold-light);
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+              "
+            >
+              المتبقي على ليلة العمر
+            </h3>
+            <div class="countdown-grid">
+              <div class="timer-box">
+                <div class="timer-number" id="days">00</div>
+                <div class="timer-label">يوم</div>
+              </div>
+              <div class="timer-box">
+                <div class="timer-number" id="hours">00</div>
+                <div class="timer-label">ساعة</div>
+              </div>
+              <div class="timer-box">
+                <div class="timer-number" id="minutes">00</div>
+                <div class="timer-label">دقيقة</div>
+              </div>
+              <div class="timer-box">
+                <div class="timer-number" id="seconds">00</div>
+                <div class="timer-label">ثانية</div>
+              </div>
+            </div>
+          </div>
+          <div class="gold-divider"><i class="fa-solid fa-heart"></i></div>
+          <div class="flow-section card-style">
+            <h2
+              style="
+                font-family: var(--font-heading);
+                color: var(--gold-light);
+                font-size: 2.2rem;
+                margin-bottom: 18px;
+              "
+            >
+              قصتنا
+            </h2>
+            <div class="islamic-story-card">
+              <div class="story-img-wrapper">
+                <img
+                  src="./Assest/couple.png"
+                  alt="قصتنا"
+                  class="card-img"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <p class="story-text">
+                بدأت رحلتنا بنية صالحة وخطوات باركها الله بالمودة والتفاهم..<br />
+                واليوم ننسج معاً بداية عهد جديد ملؤه السكن والرحمة،<br />
+                سائلين المولى أن يجعل ديارنا عامرة بالخير وبدعواتكم الطيبة.
+              </p>
+            </div>
+          </div>
+          <div class="gold-divider">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="flow-section card-style">
+            <h2
+              style="
+                font-family: var(--font-heading);
+                color: var(--gold-light);
+                font-size: 2.2rem;
+                margin-bottom: 15px;
+              "
+            >
+              موقع الحفل
+            </h2>
+            <div class="venue-img-wrapper">
+              <img
+                src="./Assest/hall.png"
+                alt="صورة القاعة"
+                class="card-img"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+            <p
+              style="
+                font-size: 1.2rem;
+                color: #fff;
+                font-weight: bold;
+                margin-top: 10px;
+              "
+            >
+              قاعة دايموند - فندق جويل
+            </p>
+            <p
+              style="
+                font-size: 0.95rem;
+                color: var(--gold-light);
+                margin-bottom: 15px;
+              "
+            >
+              أمام أكاديمية الشرطة - زهراء مدينة نصر - القاهرة
+            </p>
+            <div class="map-img-wrapper">
+              <img src="./Assest/map.png" alt="خريطة الموقع" class="card-img" />
+            </div>
+            <a
+              href="https://maps.app.goo.gl/J7eM9hjkVLd4GAxx8?g_st=aw"
+              target="_blank"
+              style="text-decoration: none"
+            >
+              <button class="action-btn" type="button">
+                <i class="fa-solid fa-route"></i> فتح الخريطة عبر GPS
+              </button>
+            </a>
+          </div>
+          <div class="gold-divider">
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
+          <div class="flow-section card-style">
+            <h2
+              style="
+                font-family: var(--font-heading);
+                color: var(--gold-light);
+                font-size: 2.2rem;
+                margin-bottom: 8px;
+              "
+            >
+              تأكيد الحضور
+            </h2>
+            <p
+              style="
+                font-size: 0.9rem;
+                color: var(--gold-light);
+                margin-bottom: 22px;
+              "
+            >
+              يسعدنا إفادتنا بحضوركم الكريم لتنسيق استقبالكم
+            </p>
+
+            <form id="rsvpForm" onsubmit="sendToWhatsApp(event)">
+              <div class="form-field">
+                <label><i class="fa-regular fa-user"></i> الاسم الكريم</label>
+                <input
+                  type="text"
+                  id="guestName"
+                  class="custom-input"
+                  required
+                  placeholder="أدخل اسمك الكريم"
+                />
+              </div>
+              <div class="form-field">
+                <label><i class="fa-solid fa-users"></i> عدد الحضور</label>
+                <input
+                  type="number"
+                  id="guestCount"
+                  class="custom-input"
+                  min="1"
+                  required
+                  placeholder="أدخل عدد الحضور"
+                />
+              </div>
+              <div class="form-field">
+                <label
+                  ><i class="fa-regular fa-comment-dots"></i> تهنئة
+                  للعروسين</label
+                >
+                <textarea
+                  id="guestMessage"
+                  class="custom-input"
+                  rows="3"
+                  placeholder="أكتب كلمتك الطيبة للعروسين هنا..."
+                ></textarea>
+              </div>
+              <button type="submit" class="action-btn">
+                <i class="fa-solid fa-paper-plane"></i> تأكيد الحضور عبر
+                الواتساب
+              </button>
+            </form>
+          </div>
+          <div class="gold-divider"><i class="fa-solid fa-crown"></i></div>
+          <div class="flow-section card-style">
+            <div class="heartfelt-thank-card">
+              <i
+                class="fa-solid fa-heart"
+                style="
+                  font-size: 2rem;
+                  color: var(--gold-primary);
+                  margin-bottom: 12px;
+                "
+              ></i>
+              <h3 class="heartfelt-title">من القلب.. شكراً لكم</h3>
+              <p class="heartfelt-text">
+                فرحتنا ما تكملش إلا بوجودكم جنبنا في أحلى يوم في حياتنا..<br />
+                شكراً لكل حد هيشاركنا اللحظة دي بدعوة حلوة أو بحضوره الغالي،<br />
+                وجودكم بيبصم في قلوبنا ذكرى جميلة مش هننساها أبداً.<br />
+                عقبال ما نفرح معاكم في كل أوقاتكم الحلوة ❤️
+              </p>
+              <div
+                style="
+                  font-family: var(--font-title);
+                  font-size: 3.5rem;
+                  background: var(--gold-gradient);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  margin-top: 18px;
+                "
+              >
+                أحمد & نور
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./JS/script.js"></script>
+  </body>
+</html>
